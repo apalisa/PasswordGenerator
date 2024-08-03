@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Box, Button, Checkbox, FormControlLabel, TextField, Typography } from '@mui/material';
 import AutorenewIcon from '@mui/icons-material/Autorenew'; // Importar ícono
 
@@ -8,6 +9,8 @@ export const PasswordGenerator = () => {
     const [includeNumbers, setIncludeNumbers] = useState(true);
     const [includeSymbols, setIncludeSymbols] = useState(true);
     const [password, setPassword] = useState('');
+
+    const { t } = useTranslation();
 
     const generatePassword = () => {
         const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
@@ -57,10 +60,10 @@ export const PasswordGenerator = () => {
                 startIcon={<AutorenewIcon />} // Usar ícono
                 sx={{ marginTop: 2 }}
             >
-                Generar Contraseña
+                {t('generatePassword')}
             </Button>
             <Typography variant="h6" component="h2" sx={{ marginTop: 3 }}>
-                Contraseña Generada:
+                {t('passwordGenerated')}:
             </Typography>
             <Typography variant="body1" component="p" sx={{ wordBreak: 'break-all' }}>
                 {password}

@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import { CssBaseline } from '@mui/material';
 import { ThemeProvider } from './theme/ThemeProvider'; // Importa el proveedor de tema
+import './i18n'; // Importa la configuración de i18next
+import App from './App';
 import '@fontsource/roboto';
 import './styles.css';
 
