@@ -1,0 +1,23 @@
+.App {
+    text-align: center;
+    margin: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+input[type="number"] {
+    width: 50px;
+}
+
+button {
+    margin: 20px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+h2 {
+    margin-top: 20px;
+}
